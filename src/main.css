@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Koh+Santepheap:wght@100;300;400;700;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noticia+Text:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
 *::-webkit-scrollbar {
     display: none;
@@ -52,7 +53,7 @@
     font-size: 90px;
     color: white;
     text-align: center;
-    line-height: 1em;
+    line-height: 1.2em;
     margin-top: 10px;
 
 }
@@ -104,4 +105,46 @@ a {
     background: -webkit-linear-gradient(45deg, #091df6, #8708ee, #ea360e, #ea360e);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+
+    cursor: pointer;
+    text-decoration: underline;
+    text-decoration-style: dotted;
+    text-decoration-color: white;
+    transition: 0.3s;
+}
+
+#hero span:hover {
+    background: -webkit-linear-gradient(45deg, #071180, #3d046b, #651604, #ea360e);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+#hero .content {
+    width: 400px;
+    background-color: white;
+    padding: 20px;
+    position: absolute;
+    top: 20%;
+    left: 63%;
+    transform: translate(-50%, -50%);
+    border-radius: 10px;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.5s;
+
+    border-image: linear-gradient(45deg, #091df6, #8708ee, #ea360e) 1;
+    border-width: 7px;
+    border-style: solid;
+}
+
+#hero .content h5 {
+    text-transform: uppercase;
+    font-weight: 800;
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+#hero .content p {
+    font-family: Lexend, serif;
+    line-height: 1.4;
 }
