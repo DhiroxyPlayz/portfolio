@@ -1,4 +1,10 @@
 {
-  "framework": "nextjs",
-  "outputDirectory": "src"
+  "version": 2,
+  "builds": [
+    {
+      "src": "src",
+      "dest": ".next",
+      "use": "@vercel/next"
+    }
+  ]
 }
