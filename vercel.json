@@ -3,7 +3,6 @@
   "builds": [
     {
       "src": "src",
-      "dest": ".next",
       "use": "@vercel/next"
     }
   ]
