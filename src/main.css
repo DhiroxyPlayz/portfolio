@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Koh+Santepheap:wght@100;300;400;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap');
+
+*::-webkit-scrollbar {
+    display: none;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Lexend, sans-serif;
+    box-sizing: border-box;
+    overflow-x: hidden;
+
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+
+#hero {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+
+    background-image: linear-gradient(0deg, hsla(0, 0%, 7%, 1), 80%, hsla(0, 0%, 7%, 0.6)),
+    linear-gradient(transparent calc(50% - 1px), #fff 1px, transparent calc(50% + 1px) 100%),
+    linear-gradient(to right, transparent calc(50% - 1px), #fff 1px, transparent calc(50% + 1px) 100%);
+
+    background-size: 100% 100%, 40px 40px, 40px 40px;
+}
+
+#hero .darkLightToggle {
+    background-color: transparent;
+    border: none;
+    position: absolute;
+    right: 30px;
+    top: 30px;
+    cursor: pointer;
+}
+
+#hero img {
+    width: 70px;
+    height: 70px;
+}
+
+#hero  h1 {
+    font-family: "Titillium Web", sans-serif;
+    font-size: 90px;
+    color: white;
+    text-align: center;
+    line-height: 1em;
+    margin-top: 10px;
+
+}
+
+#hero  h2 {
+    font-family: "Titillium Web", sans-serif;
+    font-size: 60px;
+    font-weight: 400;
+    color: white;
+    text-align: center;
+    line-height: 1.2em;
+    margin-top: 10px;
+}
+
+#hero h4 {
+    font-family: "Titillium Web", sans-serif;
+    font-size: 30px;
+    font-weight: 200;
+    color: white;
+    text-align: center;
+    line-height: 1.2em;
+    margin-top: 10px;
+
+}
+
+#hero .myResume {
+    position: relative;
+    font-size: 20px;
+    margin: 20px 15px 15px;
+    padding: .5em 1em;
+    border-radius: 10px;
+    color: white;
+    transition: 0.5s;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid white;
+    background-color: #151515;
+}
+
+a {
+    text-decoration: none;
+    position: relative;
+    background-color: transparent;
+}
+
+#hero span {
+    background: -webkit-linear-gradient(45deg, #091df6, #8708ee, #ea360e, #ea360e);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
