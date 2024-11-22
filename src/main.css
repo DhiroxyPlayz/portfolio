@@ -35,15 +35,6 @@ body {
     background-size: 100% 100%, 40px 40px, 40px 40px;
 }
 
-#hero .darkLightToggle {
-    background-color: transparent;
-    border: none;
-    position: absolute;
-    right: 30px;
-    top: 30px;
-    cursor: pointer;
-}
-
 #hero img {
     width: 70px;
     height: 70px;
@@ -96,12 +87,6 @@ body {
     background-color: #151515;
 }
 
-a {
-    text-decoration: none;
-    position: relative;
-    background-color: transparent;
-}
-
 #hero span {
     background: -webkit-linear-gradient(45deg, #091df6, #8708ee, #ea360e, #ea360e);
     -webkit-background-clip: text;
@@ -148,6 +133,12 @@ a {
 #hero .content p {
     font-family: Lexend, serif;
     line-height: 1.4;
+}
+
+#hero a {
+    text-decoration: none;
+    position: relative;
+    background-color: transparent;
 }
 
 
@@ -271,4 +262,11 @@ a {
 #skills .future {
     text-align: center;
     margin: 10px;
+}
+
+#skills a {
+    text-decoration: none;
+    position: relative;
+    background-color: transparent;
+    color: white;
 }
