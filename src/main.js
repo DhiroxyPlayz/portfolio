@@ -26,3 +26,5 @@ const handleOnMouseMove = e => {
 for(const card of document.getElementsByClassName('card')){
     card.onmousemove = e => handleOnMouseMove(e);
 }
+
+
