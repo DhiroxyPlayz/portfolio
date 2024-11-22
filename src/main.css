@@ -13,12 +13,13 @@
     font-family: Lexend, sans-serif;
     box-sizing: border-box;
     overflow-x: hidden;
-
     -ms-overflow-style: none;
     scrollbar-width: none;
-
 }
 
+body {
+    background-color: #121212FF
+}
 
 #hero {
     height: 100vh;
@@ -147,4 +148,127 @@ a {
 #hero .content p {
     font-family: Lexend, serif;
     line-height: 1.4;
+}
+
+
+
+
+
+
+#skills {
+    background-color: #121212FF;
+    color: white;
+    width: 100vw;
+}
+
+#skills h1 {
+    font-family: "Titillium Web", sans-serif;
+    font-size: 60px;
+    text-align: center;
+}
+
+#skills .cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    max-width: 100%;
+    width: calc(100% - 20px);
+    justify-content: center;
+}
+
+#skills .card {
+    border-radius: 10px;
+    height: 120px;
+    width: 300px;
+    background-color: rgba(255, 255, 255, 0.1);
+    cursor: pointer;
+    position: relative;
+}
+
+.card:hover::before {
+    opacity: 1;
+}
+
+.card::before {
+    background: radial-gradient(500px circle at var(--mouse-x) var(--mouse-y), rgba(166, 58, 255, 0.1), transparent 40%);
+    border-radius: inherit;
+    content: "";
+    position: absolute;
+    height: 100%;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 2;
+    opacity: 0;
+    transition: opacity 500ms;
+}
+
+.card::before {
+    background: radial-gradient(500px circle at var(--mouse-x) var(--mouse-y), rgba(248, 247, 248, 0.1), transparent 40%);
+    z-index: 3;
+}
+
+#skills .card h1 {
+    position: relative;
+    font-size: 30px;
+    text-align: center;
+}
+
+#skills .card p {
+    position: relative;
+    font-size: 10px;
+    text-align: center;
+}
+
+.card > .card-content {
+    background-color: rgb(23, 23, 23);
+    border-radius: inherit;
+    margin: 1px;
+    height: calc(100% - 2px);
+    width: calc(100% - 2px);
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+
+.card > .card-border {
+    background: radial-gradient(300px circle at var(--mouse-x) var(--mouse-y), rgba(166, 58, 255, 0.1), transparent 40%);
+    z-index: 1;
+}
+
+.card img {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+}
+
+.card-text {
+    display: flex;
+    flex-direction: column;
+    margin-left: 15px;
+    flex: 1;
+}
+
+#skills .card h1 {
+    font-size: 24px;
+    text-align: left;
+    margin: 0;
+    line-height: 1.2;
+}
+
+#skills .card p {
+    font-size: 12px;
+    text-align: left;
+    margin-top: 5px;
+    line-height: 1.4;
+}
+
+#skills .card .card-content .jsIcon {
+    border-radius: 10px;
+}
+
+#skills .future {
+    text-align: center;
+    margin: 10px;
 }
