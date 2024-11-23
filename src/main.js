@@ -28,3 +28,38 @@ for(const card of document.getElementsByClassName('card')){
 }
 
 
+
+
+
+const triggerButton = document.querySelector('.myResume');
+const closeButton = document.querySelector('.close-button');
+const modalOverlay = document.querySelector('.modal-overlay');
+const modal = document.querySelector('.modal');
+
+function openModal() {
+    modalOverlay.style.display = 'block';
+    // Force reflow to ensure the transition works
+    modalOverlay.offsetHeight;
+    modalOverlay.style.opacity = '1';
+    modal.classList.add('show');
+}
+
+function closeModal() {
+    modalOverlay.style.opacity = '0';
+    modal.classList.remove('show');
+
+    // Wait for animations to finish before hiding
+    setTimeout(() => {
+        modalOverlay.style.display = 'none';
+    }, 500);
+}
+
+triggerButton.addEventListener('click', openModal);
+closeButton.addEventListener('click', closeModal);
+modalOverlay.addEventListener('click', (e) => {
+    if (e.target === modalOverlay) {
+        closeModal();
+    }
+});
+
+
