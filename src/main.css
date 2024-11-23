@@ -280,7 +280,7 @@ body {
 }
 
 .modal-content {
-    background: rgb(246, 227, 134);
+    background: rgb(255, 255, 255);
     border-radius: 1.5rem;
     min-height: 500px;
     padding: 24px;
