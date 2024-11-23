@@ -1,15 +1,31 @@
 const span = document.querySelector('#hero span');
 const content = document.querySelector('#hero .content');
 
-span.addEventListener('mouseover', () => {
+// Function to show content
+const showContent = () => {
     content.style.visibility = 'visible';
     content.style.opacity = '1';
-});
+};
 
-span.addEventListener('mouseout', () => {
+// Function to hide content
+const hideContent = () => {
     content.style.visibility = 'hidden';
     content.style.opacity = '0';
+};
+
+// Add mouseenter event listeners to both elements
+span.addEventListener('mouseenter', showContent);
+content.addEventListener('mouseenter', showContent);
+
+// Add mouseleave event listeners to both elements
+span.addEventListener('mouseleave', (e) => {
+    // Check if we're not moving to the content div
+    if (!e.relatedTarget || !e.relatedTarget.closest('.content')) {
+        hideContent();
+    }
 });
+
+content.addEventListener('mouseleave', hideContent);
 
 
 const handleOnMouseMove = e => {
