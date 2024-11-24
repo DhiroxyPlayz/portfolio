@@ -27,7 +27,6 @@ span.addEventListener('mouseleave', (e) => {
 
 content.addEventListener('mouseleave', hideContent);
 
-
 const handleOnMouseMove = e => {
     const { currentTarget: target } = e;
 
@@ -43,14 +42,34 @@ for(const card of document.getElementsByClassName('card')){
     card.onmousemove = e => handleOnMouseMove(e);
 }
 
-
-
-
-
+// Modal code
 const triggerButton = document.querySelector('.myResume');
 const closeButton = document.querySelector('.close-button');
 const modalOverlay = document.querySelector('.modal-overlay');
 const modal = document.querySelector('.modal');
+
+// Store the original scroll position
+let scrollPosition = 0;
+
+function disableScroll() {
+    // Store current scroll position
+    scrollPosition = window.pageYOffset;
+    // Add styles to body to prevent scrolling
+    document.body.style.overflow = 'hidden';
+    document.body.style.position = 'fixed';
+    document.body.style.top = `-${scrollPosition}px`;
+    document.body.style.width = '100%';
+}
+
+function enableScroll() {
+    // Remove styles from body
+    document.body.style.overflow = '';
+    document.body.style.position = '';
+    document.body.style.top = '';
+    document.body.style.width = '';
+    // Restore scroll position
+    window.scrollTo(0, scrollPosition);
+}
 
 function openModal() {
     modalOverlay.style.display = 'block';
@@ -58,11 +77,13 @@ function openModal() {
     modalOverlay.offsetHeight;
     modalOverlay.style.opacity = '1';
     modal.classList.add('show');
+    disableScroll(); // Disable scrolling when modal opens
 }
 
 function closeModal() {
     modalOverlay.style.opacity = '0';
     modal.classList.remove('show');
+    enableScroll(); // Re-enable scrolling when modal closes
 
     // Wait for animations to finish before hiding
     setTimeout(() => {
@@ -77,5 +98,3 @@ modalOverlay.addEventListener('click', (e) => {
         closeModal();
     }
 });
-
-
