@@ -108,7 +108,7 @@ body {
     text-align: center;
     line-height: 1.2em;
     margin-top: 10px;
-
+    overflow: hidden;
 }
 
 #hero  .shortDisc {
@@ -119,6 +119,7 @@ body {
     text-align: center;
     line-height: 1.2em;
     margin-top: 10px;
+    overflow: hidden;
 }
 
 #hero h4 {
@@ -129,6 +130,7 @@ body {
     text-align: center;
     line-height: 1.2em;
     margin-top: 10px;
+    overflow: hidden;
 
 }
 
@@ -457,13 +459,9 @@ body {
     width: 100%;
     z-index: 2;
     opacity: 0;
-    transition: opacity 500ms;
+    transition: opacity 500ms;  
 }
 
-.card::before {
-    background: radial-gradient(500px circle at var(--mouse-x) var(--mouse-y), rgba(248, 247, 248, 0.1), transparent 40%);
-    z-index: 3;
-}
 
 #skills .card h1 {
     position: relative;
